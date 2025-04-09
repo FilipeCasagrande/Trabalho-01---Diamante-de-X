@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int x;
+            int x, linhas, colunas;
             Console.WriteLine("Informe um número impar para determinar a quantidade de X do diamante");
             x = Convert.ToInt32(Console.ReadLine());
 
@@ -12,10 +12,33 @@
             {
                 Console.WriteLine("Entrada inválida, informe um número impar");
                 x = Convert.ToInt32(Console.ReadLine());
-
             }
 
+            linhas = x;
+            colunas = x;
 
+            for (int i = 0; i <= x; i++)
+            {
+                Console.Write(" X ");
+            }
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             Console.ReadLine();
         }
     }
