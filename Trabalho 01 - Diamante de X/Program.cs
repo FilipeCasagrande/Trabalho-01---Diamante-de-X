@@ -1,4 +1,7 @@
-﻿namespace Trabalho_01___Diamante_de_X
+﻿using System.Runtime.Serialization;
+using System.Threading.Tasks.Dataflow;
+
+namespace Trabalho_01___Diamante_de_X
 {
     internal class Program
     {
@@ -6,20 +9,29 @@
         {
             int x, linhas, colunas;
             
-            Console.WriteLine("Informe um número impar para determinar a quantidade de X do diamante");
+            Console.Write("Informe um número impar para determinar a quantidade de X do diamante: ");
             x = Convert.ToInt32(Console.ReadLine());
 
             while (x % 2 == 0)
             {
                 Console.WriteLine("Entrada inválida, informe um número impar");
                 x = Convert.ToInt32(Console.ReadLine());
-                linhas = x;
-                colunas = x;
             }
+
 
             for (int i = 1; i <= x; i++)
             {
-                Console.Write(" X ");
+                Console.Write("x ");
+            }
+
+            for (int i = 1; i < x; i++)
+            {
+                Console.WriteLine(" ");
+                for (int j = i; j < x; j++)
+               {
+                   Console.Write("x ");
+                    
+               }
             }
 
             Console.ReadLine();
