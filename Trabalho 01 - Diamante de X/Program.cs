@@ -7,8 +7,8 @@ namespace Trabalho_01___Diamante_de_X
     {
         static void Main(string[] args)
         {
-            int x;
-
+            int x; 
+            
             Console.Write("Informe um número impar para determinar a quantidade de X do diamante: ");
             x = Convert.ToInt32(Console.ReadLine());
 
@@ -17,34 +17,35 @@ namespace Trabalho_01___Diamante_de_X
                 Console.WriteLine("Entrada inválida, informe um número impar");
                 x = Convert.ToInt32(Console.ReadLine());
             }
-
-
-            for (int i = 1; i <= x; i++)
+            int espacos = x / 2;
+            int letras = 1;
+            
+            //Triangulo crescente
+            for(int i = 0; i <= espacos; i++)
             {
-                Console.WriteLine("x ");
-                if (i != x)
+                for(int j = 0; j < espacos; j++)
                 {
-                    for (int j = 1; j <= i; j++)
-                    {
-                        Console.Write("x ");
-                    }
+                    Console.Write(' ');
                 }
+                
+                for(int k = 0; k < letras; k++)
+                {
+                    Console.Write("x");
+                }
+                Console.WriteLine();
+                espacos --;
+                letras += 2;
             }
 
 
 
+            
 
-            for (int i = 1; i < x; i++)
-            {
-                if (i != 1)
-                {
-                    Console.WriteLine(" ");
-                }
-                for (int j = i; j < x; j++)
-                {
-                    Console.Write("x ");
-                }
-            }
+            
+
+
+
+
             Console.ReadLine();
         }
     }
