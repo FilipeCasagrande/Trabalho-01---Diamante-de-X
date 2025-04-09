@@ -17,19 +17,11 @@
                 colunas = x;
             }
 
-           
-
             for (int i = 1; i <= x; i++)
             {
                 Console.Write(" X ");
             }
 
-            
-            
-            
-            
-            
-            
             Console.ReadLine();
         }
     }
