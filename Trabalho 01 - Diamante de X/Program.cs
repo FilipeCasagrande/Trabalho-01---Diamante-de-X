@@ -26,7 +26,7 @@ namespace Trabalho_01___Diamante_de_X
         {
             int x;
 
-            Console.Write("Informe um número impar para determinar a quantidade de X do diamante: ");
+            Console.Write("Informe um número impar para determinar o tamanho do diamante: ");
             x = Convert.ToInt32(Console.ReadLine());
             Verificacao(x);
             return x;
