@@ -12,9 +12,9 @@ namespace Trabalho_01___Diamante_de_X
             Console.Write("Informe um número impar para determinar a quantidade de X do diamante: ");
             x = Convert.ToInt32(Console.ReadLine());
 
-            while (x % 2 == 0)
+            while (x % 2 == 0 || x < 1)
             {
-                Console.WriteLine("Entrada inválida, informe um número impar");
+                Console.WriteLine("Entrada inválida, informe um número impar positivo");
                 x = Convert.ToInt32(Console.ReadLine());
             }
 
