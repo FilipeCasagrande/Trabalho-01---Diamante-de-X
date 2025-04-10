@@ -7,20 +7,13 @@ namespace Trabalho_01___Diamante_de_X
     {
         static void Main(string[] args)
         {
-            int x;
+            int n = entradaDeDados();
 
-            Console.Write("Informe um número impar para determinar a quantidade de X do diamante: ");
-            x = Convert.ToInt32(Console.ReadLine());
+            
 
-            while (x % 2 == 0 || x < 1)
-            {
-                Console.WriteLine("Entrada inválida, informe um número impar positivo");
-                x = Convert.ToInt32(Console.ReadLine());
-            }
-
-            int espacos = x / 2;
+            int espacos = n / 2;
             int letras = 1;
-            int meio = x / 2;
+            int meio = n / 2;
 
             for (int i = 0; i <= meio; i++)
             {
@@ -39,7 +32,7 @@ namespace Trabalho_01___Diamante_de_X
             }
 
             espacos = 1;
-            letras = x - 2;
+            letras = n - 2;
 
             for (int i = 0; i < meio; i++)
             {
@@ -59,5 +52,26 @@ namespace Trabalho_01___Diamante_de_X
 
             Console.ReadLine();
         }
+        static int entradaDeDados()
+        {
+            int x;
+
+            Console.Write("Informe um número impar para determinar a quantidade de X do diamante: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            verificacao(x);
+            return x;
+        }
+        static void verificacao(int x)
+        {
+            while (x % 2 == 0 || x < 1)
+            {
+                Console.WriteLine("Entrada inválida, informe um número impar positivo");
+                x = Convert.ToInt32(Console.ReadLine());
+
+            }
+        }
+        
+
+
     }
 }
