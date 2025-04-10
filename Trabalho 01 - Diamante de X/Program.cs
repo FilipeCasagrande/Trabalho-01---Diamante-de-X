@@ -12,7 +12,7 @@ namespace Trabalho_01___Diamante_de_X
             int espacos = n / 2;
             int letras = 1;
             int meio = n / 2;
-            
+
             ParteSuperior(espacos, letras, meio);
 
             espacos = 1;
@@ -28,16 +28,18 @@ namespace Trabalho_01___Diamante_de_X
 
             Console.Write("Informe um número impar para determinar o tamanho do diamante: ");
             x = Convert.ToInt32(Console.ReadLine());
-            Verificacao(x);
+            x = Verificacao(x);
             return x;
+                
         }
-        static void Verificacao(int x)
+        static int Verificacao(int x)
         {
-            while (x % 2 == 0 || x <= 1)
+            while (x % 2 == 0 || x < 1)
             {
                 Console.WriteLine("Entrada inválida, informe um número impar positivo");
                 x = Convert.ToInt32(Console.ReadLine());
             }
+            return x;
         }
         static void ParteSuperior(int espacos, int letras, int meio)
         {
